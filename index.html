@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0b76ad" />
+    <title>云南白药牙膏 | 牙齿清洁度测试</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app" id="app">
+      <section class="screen intro-screen is-active" id="intro-screen" aria-label="开始测试">
+        <div class="intro-media" aria-hidden="true">
+          <img class="intro-poster" src="./assets/poster-portrait.jpg" alt="" />
+          <img class="intro-product" src="./assets/product-tube.png" alt="" />
+        </div>
+        <div class="intro-content">
+          <img class="brand-logo" src="./assets/logo-vertical.png" alt="云南白药口腔健康" />
+          <p class="series-name">光钻白PRO 3抗钻白</p>
+          <h1>护口有方<br />钻白闪耀</h1>
+          <p class="intro-copy">5 个生活选择，测出你的牙齿清洁度。</p>
+          <button class="primary-button" id="start-button" type="button">开始洁白挑战</button>
+        </div>
+      </section>
+
+      <section class="screen quiz-screen" id="quiz-screen" aria-label="牙齿清洁度答题">
+        <header class="status-bar">
+          <div class="tooth-status" aria-live="polite">
+            <img id="tooth-icon" class="tooth-icon" alt="当前牙齿状态" />
+            <div>
+              <p class="status-label">牙齿状态</p>
+              <strong id="status-text">健康牙齿</strong>
+            </div>
+          </div>
+          <img class="status-logo" src="./assets/logo-vertical.png" alt="云南白药口腔健康" />
+        </header>
+
+        <div class="progress-row" id="progress-row" aria-label="答题进度"></div>
+
+        <section class="scene-stage" id="scene-stage">
+          <div class="scene-sky" aria-hidden="true"></div>
+          <div class="mirror-scene" id="scene-art" aria-hidden="true"></div>
+          <div class="scene-copy">
+            <span id="scene-time">早晨浴室</span>
+            <strong id="scene-title">对镜刷牙</strong>
+          </div>
+          <div class="product-cameo">
+            <img src="./assets/product-tube.png" alt="云南白药光钻白牙膏" />
+            <span>云南白药牙膏</span>
+          </div>
+        </section>
+
+        <section class="question-panel" id="question-panel" aria-live="polite">
+          <div class="question-kicker" id="question-kicker">第 1 题</div>
+          <h2 id="question-title">刷牙的最佳时长是？</h2>
+          <div class="options-list" id="options-list"></div>
+          <div class="feedback-box" id="feedback-box" hidden>
+            <p id="feedback-text"></p>
+            <p class="tip-text" id="tip-text" hidden></p>
+          </div>
+        </section>
+      </section>
+
+      <section class="screen result-screen" id="result-screen" aria-label="测试结果">
+        <div class="result-hero">
+          <img class="result-poster" src="./assets/poster-square.jpg" alt="" />
+          <div class="result-brand">
+            <img src="./assets/logo-vertical.png" alt="云南白药口腔健康" />
+            <span>护口有方 · 钻白闪耀</span>
+          </div>
+        </div>
+        <section class="result-panel">
+          <div class="result-tooth-shell">
+            <img id="result-tooth" class="result-tooth" alt="最终牙齿状态" />
+          </div>
+          <p class="result-level" id="result-level">等级 0</p>
+          <h2 id="result-title">测试完成</h2>
+          <p id="result-message">继续保持口腔清洁习惯。</p>
+          <div class="result-product">
+            <img src="./assets/product-tube.png" alt="云南白药光钻白牙膏" />
+            <p>日常清洁搭配云南白药光钻白牙膏，帮助减少色渍困扰，守住每一次笑容高光。</p>
+          </div>
+          <div class="result-actions">
+            <button class="primary-button" id="restart-button" type="button">重新测试</button>
+            <button class="secondary-button" id="share-button" type="button">分享结果</button>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <div class="modal" id="modal" hidden>
+      <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <h2 id="modal-title">提示</h2>
+        <p id="modal-message"></p>
+        <button class="primary-button" id="modal-button" type="button">查看结果</button>
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
